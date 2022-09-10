@@ -3,8 +3,13 @@ class Parser
     @file_reader = FileReader.new(arguments)
   end
 
+  # Gethers content and prints
   def run
-    puts ordered_paths.map { |p| p.join(" ") }
+    puts "list of webpages with most page views ordered DESC"
+    puts visits.map { |path, count| "#{path} #{count}" }
+
+    puts "\n\nlist of webpages with most unique page views DESC"
+    puts unique_views.map { |path, count| "#{path} #{count}" }
   end
 
   def visits

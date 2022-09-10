@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'bundler/setup'
-require 'csv'
+require 'rspec'
 require 'tempfile'
 require 'securerandom'
 
